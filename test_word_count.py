@@ -7,13 +7,13 @@ import ipdb
 
 def load_data(filepath):
     with open(filepath, "r") as textfile:
-        text = textfile.read
-    print(text)
+        text = textfile.read()
+    return text
 
 def get_most_frequent_words(text):
     words = re.findall(text.lower)
     count = collections.Counter(words).most_common(10)
-    print(count) 
+    return count 
 
 
 if __name__ == '__main__':
